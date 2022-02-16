@@ -1,5 +1,7 @@
 /**
  * @Title : First Class Function
+ * 
+ * Dicler a funtion into a function
  */
 
 // function outer (){
