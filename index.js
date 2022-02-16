@@ -1,42 +1,29 @@
 /**
- * @Title : First Class Function
- * 
- * Dicler a funtion into a function
+ * @Title : Return Statement
  */
 
-// function outer (){
-//   const a = 10;
-//   function inner(){
-
-//     console.log('I am Inner Function',  a);
-//   }
-//   inner()
-
-//   console.log('I am OUter Function', );
-// }
-
-// outer();
-
-function add(a, b) {
-  function sum() {
-    return a + b;
+function name(firstName, lastName, gender) {
+  let output;
+  if (gender === "male") {
+    output = `Mr. ${firstName}  ${lastName}`;
+  } else if (gender === "female") {
+    output = `Mst. ${firstName}  ${lastName}`;
   }
 
-  function sub() {
-    return a - b;
-  }
-
-  function times() {
-    return a * b;
-  }
-
-  function div() {
-    return a / b;
-  }
-
-  return sum() + sub() + times() + div();
+  return output;
 }
 
-const result = add(10, 5);
-console.log(result);
+const fullname = name("Ariful Islam", "Raju", "male");
+// console.log(fullname);
 
+function example() {
+  return {
+    name: "Ariful Islam",
+    skill: ["Javascript", "Node", "React"],
+    print: function () {
+      console.log(this.name, this.skill);
+    },
+  };
+}
+
+example().print;
