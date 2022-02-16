@@ -4,3 +4,4 @@
 
 - [x] Introduction of Functional
 - [x] First Class Function
+- [x] Inner Function
