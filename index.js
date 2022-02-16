@@ -26,4 +26,4 @@ function example() {
   };
 }
 
-example().print;
+example().print();;
