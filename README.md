@@ -6,4 +6,5 @@
 - [x] First Class Function
 - [x] Inner Function
 - [x] Return Statement
-- [x] Higher Order
+- [x] Higher Order Function
+- [x] Callback Function
