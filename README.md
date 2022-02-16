@@ -6,3 +6,4 @@
 - [x] First Class Function
 - [x] Inner Function
 - [x] Return Statement
+- [x] Higher Order

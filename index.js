@@ -2,28 +2,28 @@
  * @Title : Return Statement
  */
 
-function name(firstName, lastName, gender) {
-  let output;
-  if (gender === "male") {
-    output = `Mr. ${firstName}  ${lastName}`;
-  } else if (gender === "female") {
-    output = `Mst. ${firstName}  ${lastName}`;
-  }
+const arr = [4, 5, 1, 0, 8];
 
-  return output;
+function cbfn(a) {
+  console.log(a);
 }
 
-const fullname = name("Ariful Islam", "Raju", "male");
-// console.log(fullname);
+arr.forEach(cbfn);
 
-function example() {
-  return {
-    name: "Ariful Islam",
-    skill: ["Javascript", "Node", "React"],
-    print: function () {
-      console.log(this.name, this.skill);
-    },
+// Return a function
+
+function caller() {
+  return function (name) {
+    return "Caller Calling your " + name;
   };
 }
 
-example().print();;
+// const x = caller();
+// const y = x('Ariful Islam')
+// y
+
+// const z = x('Abdullah Al Zarif');
+// z
+
+const a = caller()("Ariful Islam");
+a;
