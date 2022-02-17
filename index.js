@@ -1,36 +1,24 @@
 /**
- * @Title : Callback Function
+ * @Title : Closure
  */
 
-// function host() {
-//   console.log("I am host function..");
+// const name = "Abdullah Al Zarif";
 
-//   function child(){
-//     console.log('I am Child');
-//   }
-//   return child
-
-//   // return function () {
-//   //   console.log("I am chiled");
-//   // };
+// function sayName() {
+//   console.log("Hello " + name);
 // }
 
-// const a = host()
-// a();
-
-// function greeting(msg) {
-//   return function (name) {
-//     console.log(msg + "  " + name);
-//   };
-// }
+// // console.dir(sayName)
 
 
-function greeting (msg){
-  function ret(name){
+// sayName();
+
+
+function greeting(msg){
+  return function(name){
     console.log(`${msg} ${name}`);
   }
-  return ret
 }
 
-const good = greeting("Good Morning");
-good("Ariful Islam");
+const hello = greeting('Hello');
+hello('Assadullah Al Labib')

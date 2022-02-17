@@ -9,3 +9,4 @@
 - [x] Higher Order Function
 - [x] Callback Function
 - [x] Return A Function From Another Function
+- [x] Closure
