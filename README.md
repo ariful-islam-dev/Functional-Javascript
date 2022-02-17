@@ -11,3 +11,4 @@
 - [x] Return A Function From Another Function
 - [x] Closure
 - [x] Sort Array of Object
+- [x] forEach of Array
