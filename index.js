@@ -1,33 +1,41 @@
 /**
- * @Title : Map function
+ * @Title : Reduce function
  */
 
 const arr = [5, 9, 1, 2, 3, 4, 6, 7, 8];
 
-const mappedArr = [];
+let sum = 0;
 
 for (let i = 0; i < arr.length; i++) {
-  mappedArr.push(arr[i] * arr[i]);
+  sum += arr[i];
 }
 
-console.log(mappedArr);
+console.log(`Summetion = ${sum}`);
 
-const squar = arr.map((value) => value * value);
-console.log(squar);
+const summetion = arr.reduce(function (a, b) {
+  return a + b;
+}, 0);
 
-function mySquar(arr, cb) {
-  const result = [];
+console.log(summetion);
+
+//
+
+function myReduce(arr, callback, init) {
+  let acc = init,
+    start = 0;
+  if (!init) {
+    (acc = arr[0]), (start = 1);
+  } 
 
   for (let i = 0; i < arr.length; i++) {
-    result.push(cb(arr[i]));
+    acc += callback(acc, arr[i], i, arr);
   }
 
-  return result;
+  return acc;
 }
 
-const cusSqur = mySquar(arr, function (value) {
-  return value * value;
-});
+const resultReduce = myReduce(arr, function (a, b) {
+  return a + b;
+}, );
 
-
-console.log(cusSqur);
+console.log(resultReduce);

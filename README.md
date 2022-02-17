@@ -14,3 +14,4 @@
 - [x] forEach of Array
 - [x] Filter of Array
 - [x] Map of Array
+- [x] Reduce of Array
