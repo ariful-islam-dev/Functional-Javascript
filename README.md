@@ -13,3 +13,4 @@
 - [x] Sort Array of Object
 - [x] forEach of Array
 - [x] Filter of Array
+- [x] Map of Array

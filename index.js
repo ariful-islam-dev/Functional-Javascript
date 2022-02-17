@@ -1,38 +1,33 @@
 /**
- * @Title : forEach
+ * @Title : Map function
  */
 
 const arr = [5, 9, 1, 2, 3, 4, 6, 7, 8];
 
-// const newArra = [];
+const mappedArr = [];
 
-// for (let i = 0; i < arr.length; i++) {
-//    if(arr[i] % 2 === 1){
-//     newArra.push(arr[i]);
-//    }
+for (let i = 0; i < arr.length; i++) {
+  mappedArr.push(arr[i] * arr[i]);
+}
 
-// }
+console.log(mappedArr);
 
-// console.log(newArra);
+const squar = arr.map((value) => value * value);
+console.log(squar);
 
-// const result = arr.filter((value, index, array) => value % 2 === 0)
-
-// console.log(result);
-
-function myFilter(arr, callback) {
+function mySquar(arr, cb) {
   const result = [];
 
   for (let i = 0; i < arr.length; i++) {
-    if (callback(arr[i])) {
-      result.push(arr[i]);
-    }
+    result.push(cb(arr[i]));
   }
 
   return result;
 }
 
-const even = myFilter(arr, function (value) {
-  return value % 2 === 0;
+const cusSqur = mySquar(arr, function (value) {
+  return value * value;
 });
 
-console.log(even);
+
+console.log(cusSqur);
