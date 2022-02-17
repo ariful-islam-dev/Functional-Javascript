@@ -2,19 +2,37 @@
  * @Title : forEach
  */
 
-const arr = [1, 2, 3, 4, 5];
+const arr = [5, 9, 1, 2, 3, 4, 6, 7, 8];
 
-// arr.forEach((value, index, array) => {
-//   console.log(index + ". Element is = " + value + ' Array '+ array);
-// });
+// const newArra = [];
 
-function loop(arr, cb) {
+// for (let i = 0; i < arr.length; i++) {
+//    if(arr[i] % 2 === 1){
+//     newArra.push(arr[i]);
+//    }
+
+// }
+
+// console.log(newArra);
+
+// const result = arr.filter((value, index, array) => value % 2 === 0)
+
+// console.log(result);
+
+function myFilter(arr, callback) {
+  const result = [];
+
   for (let i = 0; i < arr.length; i++) {
-    cb(arr[i], i, arr);
+    if (callback(arr[i])) {
+      result.push(arr[i]);
+    }
   }
+
+  return result;
 }
 
+const even = myFilter(arr, function (value) {
+  return value % 2 === 0;
+});
 
-const result = loop(arr, function(v, idx, array){
-  console.log(idx + ". Element is = " + v + ' Array '+ array);
-})
+console.log(even);

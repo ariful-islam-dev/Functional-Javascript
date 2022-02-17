@@ -12,3 +12,4 @@
 - [x] Closure
 - [x] Sort Array of Object
 - [x] forEach of Array
+- [x] Filter of Array
