@@ -10,3 +10,4 @@
 - [x] Callback Function
 - [x] Return A Function From Another Function
 - [x] Closure
+- [x] Sort Array of Object
