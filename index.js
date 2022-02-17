@@ -2,68 +2,35 @@
  * @Title : Callback Function
  */
 
-// function helle(name){
-//   print(name)
-//   print('Somethins Else')
-// }
+// function host() {
+//   console.log("I am host function..");
 
-// function print(args){
-//   console.log(args);
-// }
-
-// helle('Ariful Islam');
-
-// function hello(name, print) {
-//   print(name);
-// }
-
-// hello('Ariful Islam', print)
-
-// function print(args){
-//   console.log(args);
-// }\
-
-// hello('Ariful Islam', function(name){
-//    console.log(`Hi, How are you ${name}`);
-// })
-
-// hello('Ariful islam Raju', function(name){
-//   console.log(` Length of ${name} is ${name.length}`);
-// })
-
-// var me = {
-//   name: "Ariful Islam Raju",
-//   age: 29,
-//   email: "ariful@gmail.com",
-// };
-
-// function printMySelft(person, Callback) {
-//   console.log("Person " + person.name + "(" + person.age + ")");
-
-//   if (person.age > 18) {
-//     Callback(person.email);
+//   function child(){
+//     console.log('I am Child');
 //   }
+//   return child
+
+//   // return function () {
+//   //   console.log("I am chiled");
+//   // };
 // }
 
-// printMySelft(me, function (email) {
-//   console.log("Email sent to " + email);
-// });
+// const a = host()
+// a();
 
-function print(data, Callback1, Callback2) {
-  console.log("Original data: " + data);
-  Callback1(data);
-  Callback2(data);
+// function greeting(msg) {
+//   return function (name) {
+//     console.log(msg + "  " + name);
+//   };
+// }
+
+
+function greeting (msg){
+  function ret(name){
+    console.log(`${msg} ${name}`);
+  }
+  return ret
 }
 
-print(
-  "Ariful Islam Is a grate person of the home",
-  function (data) {
-    const upper = data.toUpperCase();
-    console.log(upper);
-  },
-  function (data) {
-    const lower = data.toLowerCase();
-    console.log(lower);
-    console.log('Length ' + data.length);
-  }
-);
+const good = greeting("Good Morning");
+good("Ariful Islam");
